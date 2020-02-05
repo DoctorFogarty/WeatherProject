@@ -1,0 +1,6 @@
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\bin\Debug\WeatherWebDB.dacpac
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\bin\Debug\WeatherWebDB.dll
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\bin\Debug\WeatherWebDB.pdb
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\obj\Debug\WeatherWebDB.sqlprojAssemblyReference.cache
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\obj\Debug\WeatherWebDB.dll
+C:\Users\DRFOG\source\repos\WeatherWebDB\WeatherWebDB\obj\Debug\WeatherWebDB.pdb

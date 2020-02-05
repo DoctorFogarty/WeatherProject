@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WeatherWebDBModelStoreContainer" CdmEntityContainer="WeatherWebDBEntities">
+    <EntitySetMapping Name="CityData">
+      <EntityTypeMapping TypeName="WeatherWebDBModel.CityData">
+        <MappingFragment StoreEntitySet="CityData">
+          <ScalarProperty Name="ZipCode" ColumnName="ZipCode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="WeatherDataID" ColumnName="WeatherDataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WeatherData">
+      <EntityTypeMapping TypeName="WeatherWebDBModel.WeatherData">
+        <MappingFragment StoreEntitySet="WeatherData">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="WeatherType" ColumnName="WeatherType" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindDirection" ColumnName="WindDirection" />
+          <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetWeatherDataByZipCode" FunctionName="WeatherWebDBModel.Store.GetWeatherDataByZipCode">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="WeatherWebDBModel.GetWeatherDataByZipCode_Result">
+          <ScalarProperty Name="WeatherType" ColumnName="WeatherType" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="Humidity" ColumnName="Humidity" />
+          <ScalarProperty Name="DewPoint" ColumnName="DewPoint" />
+          <ScalarProperty Name="Pressure" ColumnName="Pressure" />
+          <ScalarProperty Name="WindSpeed" ColumnName="WindSpeed" />
+          <ScalarProperty Name="WindDirection" ColumnName="WindDirection" />
+          <ScalarProperty Name="IMG_URL" ColumnName="IMG_URL" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ValidateZipCode" FunctionName="WeatherWebDBModel.Store.ValidateZipCode" />
+  </EntityContainerMapping>
+</Mapping>

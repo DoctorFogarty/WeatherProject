@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Weather";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/css")
+<script>
+        // https://stackoverflow.com/questions/34342875/ajax-call-to-mvc-controller-return-not-found
+        var myApp = myApp || {};
+        myApp.Urls = myApp.Urls || {};
+        myApp.Urls.baseUrl = '@Url.Content("~")';
+</script>
+<script type="text/javascript" src="~/Scripts/custom/Weather.js"></script>
+
+<h2>Weather</h2>
+
+<div id="WeatherData"></div>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeatherWebDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CityData">
+    <Key>
+      <PropertyRef Name="ZipCode" />
+    </Key>
+    <Property Name="ZipCode" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WeatherDataID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="WeatherData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WeatherType" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Temperature" Type="Int32" />
+    <Property Name="Humidity" Type="Int32" />
+    <Property Name="DewPoint" Type="Int32" />
+    <Property Name="Pressure" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WindSpeed" Type="Int32" />
+    <Property Name="WindDirection" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Name="IMG_URL" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="WeatherWebDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CityData" EntityType="Self.CityData" />
+    <EntitySet Name="WeatherData" EntityType="Self.WeatherData" />
+    <FunctionImport Name="GetWeatherDataByZipCode" ReturnType="Collection(WeatherWebDBModel.GetWeatherDataByZipCode_Result)">
+      <Parameter Name="ZipCode" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="ValidateZipCode" ReturnType="Collection(Int32)">
+      <Parameter Name="ZipCode" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="GetWeatherDataByZipCode_Result">
+    <Property Type="String" Name="WeatherType" Nullable="true" MaxLength="200" />
+    <Property Type="Int32" Name="Temperature" Nullable="true" />
+    <Property Type="Int32" Name="Humidity" Nullable="true" />
+    <Property Type="Int32" Name="DewPoint" Nullable="true" />
+    <Property Type="Decimal" Name="Pressure" Nullable="true" Precision="18" Scale="0" />
+    <Property Type="Int32" Name="WindSpeed" Nullable="true" />
+    <Property Type="String" Name="WindDirection" Nullable="true" MaxLength="3" />
+    <Property Type="String" Name="IMG_URL" Nullable="true" MaxLength="200" />
+  </ComplexType>
+</Schema>

@@ -1,0 +1,7 @@
+﻿CREATE TABLE dbo.CityData (
+	[ZipCode] INT NOT NULL,
+	[Name] NVARCHAR(200) NULL,
+	[State] NVARCHAR(200) NULL,
+	[WeatherDataID] INT NULL
+	CONSTRAINT [PK_dbo.CityData] PRIMARY KEY CLUSTERED ([ZipCode] ASC)
+);

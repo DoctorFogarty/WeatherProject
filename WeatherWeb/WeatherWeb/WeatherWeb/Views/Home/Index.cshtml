@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+        // https://stackoverflow.com/questions/34342875/ajax-call-to-mvc-controller-return-not-found
+        var myApp = myApp || {};
+        myApp.Urls = myApp.Urls || {};
+        myApp.Urls.baseUrl = '@Url.Content("~")';
+</script>
+<script type="text/javascript" src="~/Scripts/custom/Home.js"></script>
+
+
+<div align="center" class="form-group-lg" style="padding: 20px 20px 20px 20px">
+    <label for="zipcode">Weather Search - Enter Zip Code</label>
+    <table>
+        <tr>
+            <td><input type="text" class="form-control" id="zipcode" placeholder="Zip Code" /></td>
+            <td><input class="btn btn-primary btn-lg" value="Search" style="width:100px" onclick="ValidateZipCode()"></td>
+        </tr>
+        <tr><td id="msg" align="center"></td></tr>
+    </table>
+</div>

@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "WeatherWebDB", "WeatherWebDB\WeatherWebDB.sqlproj", "{CF813035-CA6B-4509-B88F-507B607076A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF813035-CA6B-4509-B88F-507B607076A4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03969356-33E1-4007-89B1-2ED22584EDC6}
+	EndGlobalSection
+EndGlobal

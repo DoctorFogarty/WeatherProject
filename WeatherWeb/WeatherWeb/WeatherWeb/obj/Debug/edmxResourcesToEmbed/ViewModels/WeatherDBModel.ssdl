@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WeatherWebDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CityData">
+    <Key>
+      <PropertyRef Name="ZipCode" />
+    </Key>
+    <Property Name="ZipCode" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="State" Type="nvarchar" MaxLength="200" />
+    <Property Name="WeatherDataID" Type="int" />
+  </EntityType>
+  <EntityType Name="WeatherData">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WeatherType" Type="nvarchar" MaxLength="200" />
+    <Property Name="Temperature" Type="int" />
+    <Property Name="Humidity" Type="int" />
+    <Property Name="DewPoint" Type="int" />
+    <Property Name="Pressure" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="WindSpeed" Type="int" />
+    <Property Name="WindDirection" Type="nvarchar" MaxLength="3" />
+    <Property Name="IMG_URL" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <Function Name="GetWeatherDataByZipCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZipCode" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ValidateZipCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ZipCode" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="WeatherWebDBModelStoreContainer">
+    <EntitySet Name="CityData" EntityType="Self.CityData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WeatherData" EntityType="Self.WeatherData" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
